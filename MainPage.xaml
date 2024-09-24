@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NotesKod.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="25">
+            <Label
+                FontSize="30"
+                HorizontalOptions="Center"
+                Text="Lista Zadań" />
+
+            <HorizontalStackLayout Spacing="0">
+                <Entry
+                    x:Name="NewItemEntry"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Nowa notatka" />
+
+                <Button
+                    x:Name="AddButton"
+                    BackgroundColor="#DC143C"
+                    Clicked="OnAddButtonClicked"
+                    HorizontalOptions="End"
+                    Text="DODAJ"
+                    TextColor="White" />
+            </HorizontalStackLayout>
+
+            <ListView x:Name="TaskListView" SeparatorColor="#DC143C">
+                <ListView.Header>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        LineHeight="10"
+                        Text="" />
+
+                </ListView.Header>
+
+            </ListView>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>
